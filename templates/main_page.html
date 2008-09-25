@@ -1,0 +1,15 @@
+
+{%  extends "base.html" %}
+{%  block title %}Bienvenido a django bookmarks{% endblock %}
+{%  block head %}Welcome to Django Bookmarks{% endblock %}
+{%  block content %}
+   {% if user.username %}
+     <p>Bienvenido {{ user.username }}!
+       aqui tu puedes guardar todo!</p>
+   {% else %}
+     <p>Bienvenido usuario anonimo!
+       tu necesitas <a href="/login/">login</a>
+       before you can store and share bookmarks.</p>
+   {% endif %}
+{% endblock %}
+
