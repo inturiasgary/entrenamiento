@@ -1,5 +1,5 @@
 # Django settings for django_bookmarks project.
-import os.path #importacion principal para recuperar el path donde esta  la web
+import os.path # ios contiene clases y metodos que nos permitiran trabajar con archivos, como por ejemplo recuperar el nombre del archivo, construir paths, etc.
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -21,7 +21,7 @@ DATABASE_PORT = ''             # Set to empty string for default. Not used with 
 # although not all choices may be available on all operating systems.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/La Paz'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -63,10 +63,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'django_bookmarks.urls'
+ROOT_URLCONF = 'entrenamiento.urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__),'templates'), #ubicacion para la utilizacion de templates<               
+    os.path.join(os.path.dirname(__file__),'templates'), #ubicacion del directorio donde se situaranlos templates de nuestro projecto
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -77,5 +77,6 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'django_bookmarks.bookmarks' #adicion para que la aplicacion funcione
+    'django.contrib.admin', #registramos la aplicacion de administracion que viene junto a django
+    'bookmarks', #registramos nuestra aplicacion llamada bookmarks
 )
