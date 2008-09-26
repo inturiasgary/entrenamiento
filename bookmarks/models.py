@@ -8,4 +8,3 @@ class Bookmark(models.Model):
     title = models.CharField(max_length=200)
     user = models.ForeignKey(User)
     link = models.ForeignKey(Link)
-# Create your models here.

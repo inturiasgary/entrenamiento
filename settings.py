@@ -46,6 +46,7 @@ MEDIA_URL = ''
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
 ADMIN_MEDIA_PREFIX = '/media/'
+SITE_MEDIA = os.path.join(os.path.dirname(__file__), 'site_media') #dira donde se ubicaran los archivos
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'g&cqy&=wp+=w5@4t39!%o#m#yqka6vv**%33^cjzvuqtfix=k%'
